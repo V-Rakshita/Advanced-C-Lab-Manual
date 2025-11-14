@@ -16,15 +16,36 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    switch(n) {
+        case 5:  printf("seventy one\n"); break;
+        case 6:  printf("seventy two\n"); break;
+        case 7:  printf("seventy three\n"); break;
+        case 8:  printf("seventy four\n"); break;
+        case 9:  printf("seventy five\n"); break;
+        case 10: printf("seventy six\n"); break;
+        case 11: printf("seventy seven\n"); break;
+        case 12: printf("seventy eight\n"); break;
+        case 13: printf("seventy nine\n"); break;
+        default: printf("Greater than 13\n");
+    }
+
+    return 0;
+}
+```
 
 
 
 
 Output:
-
-
-//paste your output here
+<img width="360" height="198" alt="image" src="https://github.com/user-attachments/assets/05246805-5b8d-4397-a465-44b26cd68f01" />
 
 
 
@@ -47,15 +68,39 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char a[50];
+    int count[4] = {0, 0, 0, 0};
+
+    printf("Enter a string of digits: ");
+    scanf("%s", a);
+
+    for(int i = 0; i < strlen(a); i++) {
+        if(a[i] >= '0' && a[i] <= '3') {
+            count[a[i] - '0']++;
+        }
+    }
+
+    for(int i = 0; i < 4; i++) {
+        printf("%d ", count[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+```
 
 
 
 
 Output:
 
+<img width="631" height="250" alt="image" src="https://github.com/user-attachments/assets/338c9998-85e8-4ae2-a936-7015626553d6" />
 
-//paste your output here
 
 
 
@@ -83,16 +128,72 @@ Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
 Program:
+```c
+#include <stdio.h>
+#include <string.h>
 
-//type your code here
+int next_permutation(int n, char *s)
+{
+    int k, l;
+    for (k = n - 2; k >= 0; k--)
+    {
+        if (s[k] < s[k + 1]) break;
+    }
+    if (k < 0) return 0;
+
+    for (l = n - 1; l > k; l--)
+    {
+        if (s[k] < s[l]) break;
+    }
+
+    char tmp = s[k];
+    s[k] = s[l];
+    s[l] = tmp;
+
+    for (int i = k + 1, j = n - 1; i < j; i++, j--)
+    {
+        tmp = s[i];
+        s[i] = s[j];
+        s[j] = tmp;
+    }
+    return 1;
+}
+
+int main()
+{
+    char s[100];
+    printf("Enter a string: ");
+    scanf("%s", s);
+
+    int n = strlen(s);
+
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
+            if (s[i] > s[j])
+            {
+                char tmp = s[i];
+                s[i] = s[j];
+                s[j] = tmp;
+            }
+
+    printf("\nAll permutations in lexicographical order:\n");
+    do
+    {
+        printf("%s\n", s);
+    } while (next_permutation(n, s));
+
+    return 0;
+}
+```
+
 
 
 
 
 Output:
 
+<img width="602" height="394" alt="image" src="https://github.com/user-attachments/assets/54b55cf3-5959-44da-be63-0ffe4d4ca6ab" />
 
-//paste your output here
 
 
 
@@ -117,7 +218,30 @@ Algorithm:
  
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    int len = n * 2 - 1;
+
+    for (int i = 0; i < len; i++) {
+        for (int j = 0; j < len; j++) {
+            int min = i < j ? i : j;
+            min = min < (len - 1 - i) ? min : (len - 1 - i);
+            min = min < (len - 1 - j) ? min : (len - 1 - j);
+            printf("%d ", n - min);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
 
 
 
@@ -125,7 +249,7 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="617" height="516" alt="image" src="https://github.com/user-attachments/assets/8f50c0d4-009c-442d-aafe-b16954f63130" />
 
 
 
@@ -156,7 +280,22 @@ o	Call the square() function and display the result.
 
 Program:
 
-//type your code here
+```c
+#include <stdio.h>
+
+int square() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    return num * num;
+}
+
+int main() {
+    int result = square();
+    printf("Square: %d\n", result);
+    return 0;
+}
+```
 
 
 
@@ -164,7 +303,8 @@ Program:
 Output:
 
 
-//paste your output here
+<img width="453" height="223" alt="image" src="https://github.com/user-attachments/assets/e10c7cd5-1fdf-4bbe-b9ab-15487ffadeb1" />
+
 
 
 
