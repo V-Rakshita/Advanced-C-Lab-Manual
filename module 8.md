@@ -1,7 +1,7 @@
-EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
-Aim:
+# EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
+## Aim:
 To write a C program print the lowercase English word corresponding to the number
-Algorithm:
+## Algorithm:
 1.	Start
 - Initialize an integer variable n.
 2.	Input Validation
@@ -14,7 +14,7 @@ Algorithm:
 -	Default: Print "Greater than 13"
 4.	Exit the program.
  
-Program:
+## Program:
 
 ```c
 #include <stdio.h>
@@ -44,7 +44,7 @@ int main() {
 
 
 
-Output:
+## Output:
 <img width="360" height="198" alt="image" src="https://github.com/user-attachments/assets/05246805-5b8d-4397-a465-44b26cd68f01" />
 
 
@@ -52,13 +52,13 @@ Output:
 
 
 
-Result:
+## Result:
 Thus, the program is verified successfully
  
-EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
-Aim:
+# EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS     IN A SINGLE  LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 .
+## Aim:
 To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
-Algorithm:
+## Algorithm:
 1.	Start
 2.	Declare char array a[50] outer loop for each digit from 0 to 3
 3.	Initialize counter c to 0
@@ -66,7 +66,7 @@ Algorithm:
 5.	Increment h to move to the next digit
 6.	End
  
-Program:
+## Program:
 
 ```c
 #include <stdio.h>
@@ -97,7 +97,7 @@ int main() {
 
 
 
-Output:
+## Output:
 
 <img width="631" height="250" alt="image" src="https://github.com/user-attachments/assets/338c9998-85e8-4ae2-a936-7015626553d6" />
 
@@ -107,7 +107,7 @@ Output:
 
 
 
-Result:
+## Result:
 Thus, the program is verified successfully
 
 EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
