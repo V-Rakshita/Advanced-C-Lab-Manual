@@ -243,7 +243,7 @@ int main() {
     int queue[5];
     int front = -1, rear = -1;
 
-    // sample insertions
+   
     rear++; queue[rear] = 10; if (front == -1) front = 0;
     rear++; queue[rear] = 20;
     rear++; queue[rear] = 30;
@@ -251,7 +251,7 @@ int main() {
     dequeue(queue, &front, &rear);
     dequeue(queue, &front, &rear);
     dequeue(queue, &front, &rear);
-    dequeue(queue, &front, &rear); // show empty
+    dequeue(queue, &front, &rear); 
 
     return 0;
 }
