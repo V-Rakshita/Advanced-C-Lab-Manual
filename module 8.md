@@ -110,11 +110,11 @@ int main() {
 ## Result:
 Thus, the program is verified successfully
 
-EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
-Aim:
+# EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER.
+## Aim:
 To write a C program to print all of its permutations in strict lexicographical order.
 
-Algorithm:
+## Algorithm:
 1.	Start
 2.	Declare variables s (pointer to an array of strings) and n (number of strings)
 
@@ -127,7 +127,7 @@ Read the number of strings n from the user Dynamically allocate memory for each 
 Free the memory allocated for each string in s Free the memory allocated for s
 7.	End
  
-Program:
+## Program:
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -190,7 +190,7 @@ int main()
 
 
 
-Output:
+## Output:
 
 <img width="602" height="394" alt="image" src="https://github.com/user-attachments/assets/54b55cf3-5959-44da-be63-0ffe4d4ca6ab" />
 
@@ -200,14 +200,13 @@ Output:
 
 
 
-Result:
+## Result:
 Thus, the program is verified successfully
  
-EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS
-SHOWN BELOW.
-Aim:
+# EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS SHOWN BELOW.
+## Aim:
 To write a C program to print a pattern of numbers from 1 to n as shown below.
-Algorithm:
+## Algorithm:
 1.	Start
 2.	Declare integer variables n, i, j, min
 3.	Read the value of n from the user
@@ -216,7 +215,7 @@ Algorithm:
 6.	Calculate min as the minimum distance to the borders
 7.	End
  
-Program:
+## Program:
 
 ```c
 #include <stdio.h>
@@ -246,7 +245,7 @@ int main() {
 
 
 
-Output:
+## Output:
 
 
 <img width="617" height="516" alt="image" src="https://github.com/user-attachments/assets/8f50c0d4-009c-442d-aafe-b16954f63130" />
@@ -256,16 +255,16 @@ Output:
 
 
 
-Result:
+## Result:
 Thus, the program is verified successfully
 
-EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
+## EXP NO:10 C PROGRAM TO FIND A SQUARE  OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
 
-Aim:
+## Aim:
 
 To write a C program that calculates the square of a number using a function that does not take any arguments, but returns the square of the number.
 
-Algorithm:
+## Algorithm:
 
 1.	Start.
 2.	Define a function square() with no parameters. This function will return an integer value.
@@ -278,7 +277,7 @@ o	Return the squared value.
 o	Call the square() function and display the result.
 5.	End.
 
-Program:
+## Program:
 
 ```c
 #include <stdio.h>
@@ -300,7 +299,7 @@ int main() {
 
 
 
-Output:
+## Output:
 
 
 <img width="453" height="223" alt="image" src="https://github.com/user-attachments/assets/e10c7cd5-1fdf-4bbe-b9ab-15487ffadeb1" />
@@ -311,7 +310,7 @@ Output:
 
 
 
-Result:
+## Result:
 Thus, the program is verified successfully
 
 
