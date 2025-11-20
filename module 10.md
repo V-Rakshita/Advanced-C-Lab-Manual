@@ -290,12 +290,72 @@ o	If the element is not found in any node, print a message indicating the elemen
 
 
 ## Program:
+```c
+#include <stdio.h>
+#include <stdlib.h>
 
-//type your code here
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+void deleteElement(struct Node** head_ref, int key) {
+    if (*head_ref == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    struct Node* temp = *head_ref;
+    if (temp->data == key) {
+        *head_ref = temp->next;
+        free(temp);
+        printf("Element %d deleted\n", key);
+        return;
+    }
+    struct Node* prev = NULL;
+    while (temp != NULL && temp->data != key) {
+        prev = temp;
+        temp = temp->next;
+    }
+    if (temp == NULL) {
+        printf("Element %d not found in the list\n", key);
+        return;
+    }
+    prev->next = temp->next;
+    free(temp);
+    printf("Element %d deleted\n", key);
+}
+
+void display(struct Node* head) {
+    while (head) {
+        printf("%d ", head->data);
+        head = head->next;
+    }
+    printf("\n");
+}
+
+int main() {
+    struct Node *head = NULL, *n2 = NULL, *n3 = NULL;
+    head = (struct Node*)malloc(sizeof(struct Node));
+    n2 = (struct Node*)malloc(sizeof(struct Node));
+    n3 = (struct Node*)malloc(sizeof(struct Node));
+
+    head->data = 10; head->next = n2;
+    n2->data = 20; n2->next = n3;
+    n3->data = 30; n3->next = NULL;
+
+    deleteElement(&head, 20);
+    display(head);
+
+    // free remaining
+    while (head) { struct Node* t = head; head = head->next; free(t); }
+    return 0;
+}
+```
 
 ## Output:
 
-//paste your output here
+<img width="350" height="135" alt="image" src="https://github.com/user-attachments/assets/a32c0ea0-5fa2-4d0f-8da5-4a3e15f47459" />
+
 
 
 
